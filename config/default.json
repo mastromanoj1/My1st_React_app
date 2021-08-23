@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://makasu:test123@cluster0.zprex.mongodb.net/react?retryWrites=true&w=majority",
+    "jwtSecret": "this is secret"
+}
