@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const dateformat = require('dateformat')
+
+
 
 const PostSchema = new Schema({
   user: {
@@ -40,16 +43,21 @@ const PostSchema = new Schema({
       avatar: {
         type: String
       },
-      date: {
-        type: Date,
-        default: Date.now
-      }
+        date: {
+          type: Date,
+          default: Date.now,
+        },
+      
+      
     }
   ],
-  date: {
-    type: Date,
-    default: Date.now
-  }
+
+     date: {
+       type: Date,
+       default: Date.now,
+     },
+
+ 
 });
 
 module.exports = mongoose.model('postinfo', PostSchema);

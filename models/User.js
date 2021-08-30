@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const dateformat = require('dateformat')
+
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -20,6 +22,10 @@ const UserSchema = new mongoose.Schema({
     date: {
       type: Date,
       default: Date.now
+    },
+    stringDate:{
+      type:String,
+      default:dateformat(new Date(),'dddd, mmmm dS, yyyy, h:MM:ss TT')
     }
   });
 

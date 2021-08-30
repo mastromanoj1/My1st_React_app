@@ -7,7 +7,7 @@ const Post = require('../../models/Postinfo');
 const User = require('../../models/User');
 const checkObjectId = require('../../middleware/checkObjectId');
 
-// @route    POST api/posts
+// @route    POST api/post
 // @desc     Create a post
 // @access   Private
 router.post(
@@ -40,7 +40,7 @@ router.post(
   }
 );
 
-// @route    GET api/posts
+// @route    GET api/post
 // @desc     Get all posts
 // @access   Private
 router.get('/', auth, async (req, res) => {
@@ -53,7 +53,7 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
-// @route    GET api/posts/:id
+// @route    GET api/post/:id
 // @desc     Get post by ID
 // @access   Private
 router.get('/:id', auth, checkObjectId('id'), async (req, res) => {

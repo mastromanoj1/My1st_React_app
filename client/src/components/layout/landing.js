@@ -1,6 +1,10 @@
 import React from 'react';
-
 import Hostcard from '../template/hostcard';
+
+
+
+
+
 
 class Landing extends React.Component {
     constructor(props) {
