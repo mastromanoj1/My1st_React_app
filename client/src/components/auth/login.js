@@ -7,6 +7,7 @@ const Login = ({ setAlert, register, isAuthenticated }) => {
             email: '',
             password: '',
           });
+        const[token , settoken]=useState(0) ;
 
 
         const { email, password} = formData;
@@ -15,6 +16,8 @@ const Login = ({ setAlert, register, isAuthenticated }) => {
         
         const onSubmit = async (e) => {
             e.preventDefault();
+
+            
             if (formData) {
 
                 const newuser = {
@@ -32,7 +35,10 @@ const Login = ({ setAlert, register, isAuthenticated }) => {
                     })
 
 
-                    console.log(response.data);
+                    console.log(response.data.token);
+                     settoken(response.data.token);
+
+                    
 
 
                 }catch(err){
@@ -81,9 +87,14 @@ const Login = ({ setAlert, register, isAuthenticated }) => {
                         <label for="password">Password</label>
                     </div>
                 </div>
+
+
+                <p>{token}</p>
+
+              
                 <br/>
 
-                <input type="submit" className="btn btn-primary" value="Login" />
+                <input type="submit" className="btn btn-primary" value="Login"  />
         
         </form>
         

@@ -1,8 +1,12 @@
   
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Register from '../auth/register';
+import Register from '../auth/register.js';
 import Login from '../auth/login.js';
+import Profile from '../post/profile';
+import Contact from '../post/contact';
+
+
 // import Alert from '../layout/Alert';
 // import Dashboard from '../dashboard/Dashboard';
 // import ProfileForm from '../profile-forms/ProfileForm';
@@ -21,6 +25,9 @@ const Routes = () => {
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
+        <Route exact path = "/profile" component = {Profile}/>
+        <Route exact path = "/contact" component = {Contact}/>
+
         {/* <Route exact path="/profiles" component={Profiles} />
         <Route exact path="/profile/:id" component={Profile} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />

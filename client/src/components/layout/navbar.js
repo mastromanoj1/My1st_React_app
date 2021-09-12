@@ -16,8 +16,8 @@ class Navbar extends React.Component{
                         <ul className="right ">
                             <li className = "hide-on-med-and-down"><a href="/login">Login </a></li>
                             <li className = "hide-on-med-and-down"><a href="/register"> Register </a></li>
-                            <li className = "hide-on-med-and-down"><a href="collapsible.html"> Contact us</a></li>
-                            <li className = "hide-on-med-and-down"><a href="mobile.html">Mobile</a></li>
+                            <li className = "hide-on-med-and-down"><a href="/contact"> Contact us</a></li>
+                            <li className = "hide-on-med-and-down"><a href="/about">About</a></li>
                             <li><a href="/profile"> Profile </a></li>
                         </ul>
                     </div>
@@ -26,8 +26,8 @@ class Navbar extends React.Component{
                 <ul className="sidenav" id="mobile-demo">
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
-                    <li><a href="collapsible.html">Contact us</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </div>
          );

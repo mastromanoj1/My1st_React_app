@@ -23,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "materialize-css": "^1.0.0",
     "mongoose": "^5.13.3",
+    "mongoose-type-url": "^2.1.0",
     "react-materialize": "^3.9.9",
     "request": "^2.88.2",
     "validator": "^13.6.0"

@@ -1,10 +1,10 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 
 import './App.css';
 
 import Navbar from '../src/components/layout/navbar';
 import Landing from './components/layout/landing';
-import Routes from './components/routing/Routes'
+import Routes from './components/routing/Routes';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from "./store";

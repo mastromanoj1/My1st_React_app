@@ -10,6 +10,7 @@ const checkObjectId = require('../../middleware/checkObjectId');
 // @route    POST api/post
 // @desc     Create a post
 // @access   Private
+
 router.post(
   '/',
   auth,
@@ -43,9 +44,18 @@ router.post(
 // @route    GET api/post
 // @desc     Get all posts
 // @access   Private
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const posts = await Post.find().sort({ date: -1 });
+    const pipeline = [
+      {
+        '$project': {
+          'id': 0, 
+          'avatar': 0, 
+          '__v': 0
+        }
+      }
+    ]
+    const posts = await Post.aggregate(pipeline);
     res.json(posts);
   } catch (err) {
     console.error(err.message);
