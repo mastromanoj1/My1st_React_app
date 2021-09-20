@@ -1,5 +1,6 @@
 import React from "react";
-import {Button,Icon,Row,Col,Card,CardTitle} from "react-materialize";
+import {Button,Icon,Card,CardTitle} from "react-materialize";
+import { Row,Col } from 'react-bootstrap';
 
 
 
@@ -39,9 +40,7 @@ render()
 
 <div className = "container ">
   <Row>
-    <div className = "cholder">
-
-      <Col m={6} s={12} offset = "m3"  >
+      <Col md={12} sm={12} lg={6} offset="l3"  >
           <Card
           className="blue-grey darken-1 mcard-title"
           header={<CardTitle image="sampleimg.jpg"> 
@@ -71,7 +70,7 @@ render()
       </Row>
       </Card>
       </Col>
-    </div>
+    
   </Row>
 </div>
 

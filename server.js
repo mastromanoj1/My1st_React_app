@@ -11,7 +11,11 @@ connectDB();
 
 // Init Middleware
 app.use(express.json({extented : false }));
-app.use(cors({origin:"http://localhost:4000/api/auth"}));
+// app.use(cors({origin:"*"}));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 app.get('/',(req,res)=>res.send("API running"));
 

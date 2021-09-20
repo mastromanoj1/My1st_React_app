@@ -14,7 +14,7 @@ const checkObjectId = require('../../middleware/checkObjectId');
 router.post(
   '/',
   auth,
-  check('text', 'Text is required').notEmpty(),
+  check('postcontent', 'Content is required').notEmpty(),
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -25,10 +25,11 @@ router.post(
       const user = await User.findById(req.user.id).select('-password');
 
       const newPost = new Post({
-        text: req.body.text,
-        name: user.name,
+        postcontent: req.body.postcontent,
+        posttitle: req.body.posttitle,
+        postcategory : req.body.postcategory,
         avatar: user.avatar,
-        user: req.user.id
+        user: req.user.id,
       });
 
       const post = await newPost.save();

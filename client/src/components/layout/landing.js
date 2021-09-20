@@ -1,5 +1,6 @@
 import React from 'react';
-import Hostcard from '../template/hostcard';
+// import Hostcard from '../template/hostcard';
+import Homepage from '../template/homepage';
 
 
 
@@ -14,7 +15,7 @@ class Landing extends React.Component {
     render() { 
         return ( 
             <div>
-                <Hostcard/>
+                <Homepage/>
             </div>
          );
     }

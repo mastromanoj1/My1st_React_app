@@ -8,12 +8,17 @@ const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId
   },
-  text: {
+  postcontent: {
     type: String,
     required: true
   },
-  name: {
-    type: String
+  posttitle: {
+    type: String,
+    required: true
+  },
+  postcategory : {
+    type:String,
+    required: true
   },
   avatar: {
     type: String

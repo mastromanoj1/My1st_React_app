@@ -1,14 +1,19 @@
 import React from 'react';
+import { BookContext } from '../contexts/authcontext';
+
 
 class Navbar extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
-        return (    
 
-            <div>
+   static contextType = BookContext
+
+  
+    render() { 
+
+      console.log(this.context)
+        return (    
+            <BookContext.Consumer>{(context) => {
+                return(
+                    <div>
                 <nav className = "navbar-fixed">
                     <div className="nav-wrapper #00695c teal darken-3 ">
                         <a  href ="/" className="brand-logo ">Logo</a>
@@ -17,7 +22,7 @@ class Navbar extends React.Component{
                             <li className = "hide-on-med-and-down"><a href="/login">Login </a></li>
                             <li className = "hide-on-med-and-down"><a href="/register"> Register </a></li>
                             <li className = "hide-on-med-and-down"><a href="/contact"> Contact us</a></li>
-                            <li className = "hide-on-med-and-down"><a href="/about">About</a></li>
+                            <li className = "hide-on-med-and-down"><a href="/about">About </a></li>
                             <li><a href="/profile"> Profile </a></li>
                         </ul>
                     </div>
@@ -30,6 +35,10 @@ class Navbar extends React.Component{
                     <li><a href="/about">About</a></li>
                 </ul>
             </div>
+                )
+            }}
+         
+            </BookContext.Consumer>
          );
     }
 }

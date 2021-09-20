@@ -15,12 +15,17 @@ html,body{
   font-size: 12px;
 }
 
-
+.holder-title{
+  font-size: 40px;
+}
 
 .card{
   border : 0px solid transparent;
   border-radius: 5px 80px 15px 80px;
-  min-width: 300px;
+  min-width: 100px;
+  max-width: 300px;
+  float: left;
+  margin: 20px;
 }
 
 .card .card-content {
@@ -59,6 +64,24 @@ html,body{
   position: fixed;
 }
 
+/* .card-header{
+  max-width: 200px;
+} */
+
+.list-inline {
+  padding-left: 0px;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+
+
+
 
 @media(max-width: 600px) {
 
@@ -81,6 +104,10 @@ html,body{
     font-size: 20px;
     font-weight :bold;
 }
+
+  .card-clip{
+    float: left;
+  }
 
   .row{
     margin: auto;
