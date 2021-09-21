@@ -13,7 +13,7 @@ class Homepage extends React.Component {
                 <Col sm={12} lg={9} className = " ">
                 <JCards/>   
                 </Col>
-                <Col lg={3} className="red">
+                <Col lg={3} className="red hide-on-small-only">
                    <Quicklink/> 
                 </Col>
                 </Row>

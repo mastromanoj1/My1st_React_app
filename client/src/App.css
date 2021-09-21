@@ -6,9 +6,57 @@ html,body{
   background-color: #ededd3;
   font-family: "Quicksand", sans-serif;
 }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+
+main {
+  flex: 1 0 auto;
+}
+
+.page-title{
+
+  font-size: 60px;
+}
+
+.page-title{
+
+  font-size-adjust: inherit;
+}
+
+.posttitle{
+
+font-style: italic;
+font-weight: bolder;
+font-variant :small-caps;
+font-size: 40px ;
+width: 100%;
+background-color: teal;
+line-height: 40px;
+
+
+display: inline-block;
+overflow-wrap: break-word;
+word-wrap: break-word;
+word-break: break-word;
+}
+
+.postpage{
+
+
+padding: 60px;
+padding-top: 30px;
+margin-top: 20px;
+background-color: azure;
+
+}
 
 .fixspace{
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .rating,.material-icons{

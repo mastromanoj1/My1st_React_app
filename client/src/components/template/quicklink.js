@@ -4,7 +4,7 @@ class Quicklink extends React.Component {
     render() { 
         return (
         <div className ="card-holder">
-        <h1 className = "holder-title"> Quick Link        </h1>
+        <h1 className = "holder-title"> Quick Link  </h1>
 
         
         <div class="collection">

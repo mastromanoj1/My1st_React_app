@@ -3,7 +3,9 @@ import React, { Fragment } from 'react';
 import './App.css';
 
 
+
 import Navbar from '../src/components/layout/navbar';
+import Footer from '../src/components/layout/footer'
 import Landing from './components/layout/landing';
 import Routes from './components/routing/Routes';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -24,6 +26,7 @@ function App() {
     <Provider store = {store}>
         <Router>
         <Navbar/>
+
       
         <div className="fixspace"></div>
         <Fragment>
@@ -32,6 +35,7 @@ function App() {
             <Route component={Routes} />
           </Switch>
         </Fragment>
+        <Footer/>
       </Router>
       </Provider>
       </BookContextProvider>

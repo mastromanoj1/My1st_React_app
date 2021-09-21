@@ -5,6 +5,8 @@ import Register from '../auth/register.js';
 import Login from '../auth/login.js';
 import Profile from '../post/profile';
 import Contact from '../post/contact';
+import Postpage from '../template/postpage.js';
+
 
 
 // import Alert from '../layout/Alert';
@@ -27,6 +29,7 @@ const Routes = () => {
         <Route exact path="/login" component={Login} />
         <Route exact path = "/profile" component = {Profile}/>
         <Route exact path = "/contact" component = {Contact}/>
+        <Route exact path = '/category/:postcollection/:id' component = {Postpage}/>
 
         {/* <Route exact path="/profiles" component={Profiles} />
         <Route exact path="/profile/:id" component={Profile} />
