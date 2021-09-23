@@ -13,6 +13,8 @@ import {Provider} from 'react-redux';
 import store from "./store";
 import ThemeContextProvider from '../src/components/contexts/authuser';
 import BookContextProvider from '../src/components/contexts/authcontext';
+import GcontextProvider from '../src/components/contexts/gauthcontext';
+import GisauthProvider from '../src/components/contexts/gisauth'
 
 
 
@@ -23,6 +25,8 @@ function App() {
   return (
     <ThemeContextProvider>
     <BookContextProvider>
+    <GcontextProvider>
+    <GisauthProvider>
     <Provider store = {store}>
         <Router>
         <Navbar/>
@@ -38,6 +42,8 @@ function App() {
         <Footer/>
       </Router>
       </Provider>
+      </GisauthProvider>
+      </GcontextProvider>
       </BookContextProvider>
     </ThemeContextProvider>
   );
