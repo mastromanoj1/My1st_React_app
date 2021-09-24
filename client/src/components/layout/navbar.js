@@ -1,21 +1,22 @@
-import React from 'react';
-import { BookContext } from '../contexts/authcontext';
-import { Gisauth } from '../contexts/gisauth';
+import React ,{useContext} from 'react';
+import {Gisauth} from '../contexts/gisauth'
 
 
 
-class Navbar extends React.Component{
 
-   static contextType = BookContext
+const Navbar = () => {
 
-   
-    render() { 
-        
-      console.log()
-        return (    
-            <BookContext.Consumer>{(context) => {
-                return(
-                    <div>
+    const [isauth,setIsauth] = useContext(Gisauth);
+    let button ;
+
+    if(isauth){
+        button = "true"
+    }else{
+        button = ""
+    }
+
+    return(
+        <div>
                 <nav className = "navbar-fixed">
                     <div className="nav-wrapper #00695c teal darken-3 ">
                         <a  href ="/" className="brand-logo ">Logo</a>
@@ -25,7 +26,7 @@ class Navbar extends React.Component{
                             <li className = "hide-on-med-and-down"><a href="/register"> Register </a></li>
                             <li className = "hide-on-med-and-down"><a href="/contact"> Contact us</a></li>
                             <li className = "hide-on-med-and-down"><a href="/about">About </a></li>
-                            <li><a href="/profile"> Profile </a></li>
+                            <li><a href="/profile"> {button} </a></li>
                         </ul>
                     </div>
                 </nav>
@@ -36,15 +37,18 @@ class Navbar extends React.Component{
                     <li><a href="/contact">Contact us</a></li>
                     <li><a href="/about">About</a></li>
                 </ul>
-                {/* {console.log(isauth)} */}
+                
                 
             </div>
-                )
-            }}
-         
-            </BookContext.Consumer>
-         );
-    }
+    )
+
+
 }
+
+ 
+ 
+    
+   
+ 
  
 export default Navbar;

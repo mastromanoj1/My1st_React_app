@@ -1,10 +1,12 @@
 import React, { Fragment, useState,useContext,useEffect } from 'react';
 import axios from "axios";
 import { BookContext } from '../contexts/authcontext';
-import  { useHistory } from 'react-router-dom'
+import  { useHistory } from 'react-router-dom';
+import {Gisauth} from '../contexts/gisauth'
 
 const Login = ({ setAlert, register, isAuthenticated }) => {
-        
+
+        const [isauth,setIsauth] = useContext(Gisauth);
         const [formData, setFormData] = useState({
             email: '',
             password: '',
@@ -12,8 +14,10 @@ const Login = ({ setAlert, register, isAuthenticated }) => {
         const { email, password} = formData; 
 
         const {books,newtoken} = useContext(BookContext)  
-        const history = useHistory();  
+        const history = useHistory(); 
 
+
+          
 
         const onSubmit = async (e) => {
             e.preventDefault();
@@ -58,7 +62,7 @@ const Login = ({ setAlert, register, isAuthenticated }) => {
 
           setFormData({ ...formData, [e.target.name]: e.target.value });
 
-          if(!books.isauth){
+          if(!isauth){
             return (
             <BookContext.Consumer>{() => {
             return(
@@ -125,9 +129,6 @@ const Login = ({ setAlert, register, isAuthenticated }) => {
             </BookContext.Consumer>
             );
         }
-
-        
-
         }
     
 

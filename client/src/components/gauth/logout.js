@@ -14,7 +14,7 @@ function Logout() {
 
   const onSuccess = () => {
     console.log('Logout made successfully');
-    alert('Logout made successfully ✌');
+    // alert('Logout made successfully ✌');
     setContext({name:"1234567789"});
     setIsauth(false);
   };

@@ -15,6 +15,7 @@ import ThemeContextProvider from '../src/components/contexts/authuser';
 import BookContextProvider from '../src/components/contexts/authcontext';
 import GcontextProvider from '../src/components/contexts/gauthcontext';
 import GisauthProvider from '../src/components/contexts/gisauth'
+import Signup from "../src/components/gauth/signup"
 
 
 
@@ -30,9 +31,11 @@ function App() {
     <Provider store = {store}>
         <Router>
         <Navbar/>
+        
 
       
         <div className="fixspace"></div>
+       <Signup/>
         <Fragment>
           <Switch>
             <Route exact path="/" component={Landing} />

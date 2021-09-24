@@ -18,9 +18,9 @@ const clientId =
     const onSuccess = (res) => {
         
         console.log('Login Success: currentUser:', res.profileObj);
-        alert(
-          `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
-        );
+        // alert(
+        //   `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
+        // );
         setContext(res.profileObj);
         setIsauth(true);        
         refreshTokenSetup(res);
@@ -53,7 +53,7 @@ const clientId =
         style={{ marginTop: '100px' }}
         isSignedIn={true}
       />
-      <p>{context.name}{console.log(isauth)}</p>
+      <p>{context.name}</p>
       
       
     </div>
