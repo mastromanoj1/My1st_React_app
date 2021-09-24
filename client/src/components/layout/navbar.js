@@ -1,15 +1,17 @@
 import React from 'react';
 import { BookContext } from '../contexts/authcontext';
+import { Gisauth } from '../contexts/gisauth';
+
 
 
 class Navbar extends React.Component{
 
    static contextType = BookContext
 
-  
+   
     render() { 
-
-      console.log(this.context)
+        
+      console.log()
         return (    
             <BookContext.Consumer>{(context) => {
                 return(
@@ -34,6 +36,8 @@ class Navbar extends React.Component{
                     <li><a href="/contact">Contact us</a></li>
                     <li><a href="/about">About</a></li>
                 </ul>
+                {/* {console.log(isauth)} */}
+                
             </div>
                 )
             }}

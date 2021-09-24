@@ -1,4 +1,4 @@
-import React ,{useContext } from 'react';
+import React ,{useContext,useEffect } from 'react';
 import {Gcontext} from '../contexts/gauthcontext';
 import { Gisauth } from '../contexts/gisauth';
 
@@ -16,15 +16,18 @@ const clientId =
     const [isauth,setIsauth] = useContext(Gisauth);
  
     const onSuccess = (res) => {
+        
         console.log('Login Success: currentUser:', res.profileObj);
         alert(
           `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
         );
         setContext(res.profileObj);
-        setIsauth(true);
+        setIsauth(true);        
         refreshTokenSetup(res);
     
   };
+
+  
 
   const onFailure = (res) => {
     console.log('Login failed: res:', res);
@@ -50,8 +53,8 @@ const clientId =
         style={{ marginTop: '100px' }}
         isSignedIn={true}
       />
-      <p>{context.name}</p>
-      <p>{console.log(isauth)}</p>
+      <p>{context.name}{console.log(isauth)}</p>
+      
       
     </div>
       )

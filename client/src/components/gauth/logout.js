@@ -1,4 +1,4 @@
-import React ,{useContext }from 'react';
+import React ,{useContext,useEffect }from 'react';
 import { GoogleLogout } from 'react-google-login';
 import {Gcontext} from '../contexts/gauthcontext';
 import {Gisauth} from '../contexts/gisauth';
@@ -18,6 +18,8 @@ function Logout() {
     setContext({name:"1234567789"});
     setIsauth(false);
   };
+
+  
 
   return (
     <div>
